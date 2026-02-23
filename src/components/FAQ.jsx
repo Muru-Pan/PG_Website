@@ -5,10 +5,10 @@ import { FaChevronDown } from 'react-icons/fa'
 
 const faqs = [
     { q: 'What is included in the monthly rent?', a: 'Your monthly rent includes fully furnished accommodation, 3 meals per day (breakfast, lunch, dinner), high-speed Wi-Fi, electricity, water, laundry service, housekeeping, 24/7 security, and power backup. No hidden charges!' },
-    { q: 'What is the minimum stay period?', a: 'We offer flexible stays with a minimum lock-in period of 1 month. Long-term stays (6 months or more) get a discount of up to 10% on monthly charges.' },
-    { q: 'Is the PG co-ed or single gender?', a: 'We operate separate PG facilities for males and females in secured, independent wings. Each wing has its own entrance and dedicated security.' },
-    { q: 'How do I apply or book a room?', a: 'You can book a room by filling the inquiry form on our website, calling our number, or visiting in person. We recommend scheduling a free site visit before booking.' },
-    { q: 'What payment methods are accepted?', a: 'We accept UPI (PhonePe, Google Pay, Paytm), NEFT/RTGS bank transfers, debit/credit cards, and cash. EMI options are available for select plans.' },
+    { q: 'What is the minimum stay period?', a: 'We offer flexible stays with a minimum lock-in period of 1 month.' },
+    { q: 'Is the PG co-ed or single gender?', a: 'We operate separate PG facilities for males.' },
+    { q: 'How do I apply or book a room?', a: 'You can book a room by calling our number, or visiting in person. We recommend scheduling a free site visit before booking.' },
+    { q: 'What payment methods are accepted?', a: 'We accept UPI (PhonePe, Google Pay, Paytm), NEFT/RTGS bank transfers, debit/credit cards, and cash.' },
 ]
 
 function FAQItem({ faq, index }) {
