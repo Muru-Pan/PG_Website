@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal-900 font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+}
+
+@layer components {
+
+  /* Warm card surface */
+  .card-surface {
+    background: #FFFFFF;
+    border: 1px solid #EEE0CA;
+    box-shadow: 0 2px 16px rgba(58, 46, 30, 0.07);
+  }
+
+  /* Parchment card */
+  .card-parchment {
+    background: #FAF4E8;
+    border: 1px solid #E5CB99;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-charcoal-900;
+  }
+
+  .section-subtitle {
+    @apply text-charcoal-500 text-lg md:text-xl max-w-2xl;
+  }
+
+  /* Gradient text – terracotta */
+  .gradient-text {
+    @apply bg-gradient-to-r from-terra-500 via-terra-400 to-saffron-500 bg-clip-text text-transparent;
+  }
+
+  /* Gradient text – forest */
+  .gradient-text-green {
+    @apply bg-gradient-to-r from-forest-500 to-forest-400 bg-clip-text text-transparent;
+  }
+
+  /* Primary button – terracotta solid */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-terra-500 hover:bg-terra-600 text-white font-bold px-7 py-3.5 rounded-full transition-all duration-300 shadow-warm hover:shadow-warm-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-terra-500 text-terra-500 hover:bg-terra-500 hover:text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300;
+  }
+
+  /* Green button */
+  .btn-green {
+    @apply inline-flex items-center gap-2 bg-forest-500 hover:bg-forest-600 text-white font-bold px-7 py-3.5 rounded-full transition-all duration-300 shadow-green hover:-translate-y-0.5;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-8 lg:px-16;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover;
+  }
+
+  /* Wavy divider via SVG approach */
+  .divider-warm {
+    @apply w-16 h-1.5 rounded-full bg-gradient-to-r from-terra-400 to-saffron-400;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    @apply inline-flex items-center gap-1.5 bg-terra-50 border border-terra-200 text-terra-600 text-xs font-semibold px-4 py-1.5 rounded-full tracking-wide uppercase;
+  }
+
+  .tag-pill-green {
+    @apply inline-flex items-center gap-1.5 bg-forest-50 border border-forest-200 text-forest-600 text-xs font-semibold px-4 py-1.5 rounded-full tracking-wide uppercase;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
