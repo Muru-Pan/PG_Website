@@ -60,7 +60,7 @@ export default function Rooms() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                     ref={ref}
                 >
                     <div className="flex justify-center mb-6">
@@ -79,7 +79,7 @@ export default function Rooms() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10"
                 >
                     {rooms.map((room, i) => (
                         <motion.div
@@ -89,15 +89,16 @@ export default function Rooms() {
                             className="card-surface rounded-3xl overflow-hidden card-hover relative text-center md:text-left"
                         >
                             {/* Badge */}
-                            <div className="p-8 pb-0 flex justify-center md:justify-start">
+                            <div className="p-5 md:p-8 pb-0 flex justify-center md:justify-start">
                                 <div className={room.tagColor}>
                                     {room.tagIcon} {room.tag}
                                 </div>
                             </div>
 
                             {/* Content */}
-                            <div className="p-8">
-                                <h3 className="font-accent text-3xl font-bold text-charcoal-900 mb-6">{room.type}</h3>
+                            <div className="p-5 md:p-8">
+                                <h3 className="font-accent text-2xl md:text-3xl font-bold text-charcoal-900 mb-2">{room.type}</h3>
+                                <p className="text-charcoal-500 font-semibold text-lg mb-4 md:mb-6">₹{room.price}<span className="text-sm font-normal">{room.period}</span></p>
 
                                 <Link to="contact" smooth duration={600} offset={-80}>
                                     <button className={`${room.btnColor} w-full justify-center text-sm py-4 rounded-xl`}>

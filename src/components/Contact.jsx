@@ -54,7 +54,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <div className="flex justify-center mb-6">
                         <div className="divider-warm" />
@@ -75,7 +75,7 @@ export default function Contact() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="lg:col-span-4 flex flex-col gap-6"
                     >
-                        <div className="card-parchment rounded-3xl p-8 flex-1 flex flex-col justify-center gap-8 shadow-sm">
+                        <div className="card-parchment rounded-3xl p-5 md:p-8 flex-1 flex flex-col justify-center gap-6 md:gap-8 shadow-sm">
                             <div className="flex items-start gap-5">
                                 <div className="w-14 h-14 rounded-2xl bg-terra-100 flex items-center justify-center text-terra-600 text-xl flex-shrink-0 shadow-sm">
                                     <FaPhoneAlt />
@@ -110,8 +110,8 @@ export default function Contact() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="lg:col-span-8"
                     >
-                        <div className="card-surface rounded-3xl p-8 max-w-2xl mx-auto shadow-card">
-                            <h3 className="text-3xl font-accent font-bold text-charcoal-900 mb-8">Book a Visit / Inquiry</h3>
+                        <div className="card-surface rounded-3xl p-5 md:p-8 max-w-2xl mx-auto shadow-card">
+                            <h3 className="text-2xl md:text-3xl font-accent font-bold text-charcoal-900 mb-6 md:mb-8">Book a Visit / Inquiry</h3>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* Name */}

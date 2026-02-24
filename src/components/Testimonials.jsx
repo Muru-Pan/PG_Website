@@ -66,7 +66,7 @@ export default function Testimonials() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <div className="flex justify-center mb-6">
                         <div className="divider-warm" />
@@ -100,7 +100,7 @@ export default function Testimonials() {
                     >
                         {testimonials.map((t, i) => (
                             <SwiperSlide key={i} className="h-auto">
-                                <div className="card-surface rounded-3xl p-8 h-full flex flex-col hover:shadow-warm transition-shadow duration-300">
+                                <div className="card-surface rounded-3xl p-5 md:p-8 h-full flex flex-col hover:shadow-warm transition-shadow duration-300">
                                     <FaQuoteLeft className="text-terra-200 text-4xl mb-6" />
 
                                     <p className="text-charcoal-600 text-[15px] leading-relaxed flex-1 mb-8 italic">

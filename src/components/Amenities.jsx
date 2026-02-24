@@ -42,7 +42,7 @@ export default function Amenities() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <div className="flex justify-center mb-6">
                         <div className="divider-warm" />
@@ -60,19 +60,19 @@ export default function Amenities() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+                    className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6"
                 >
                     {amenities.map((am, i) => (
                         <motion.div
                             key={i}
                             variants={itemVariants}
-                            className="card-surface rounded-2xl p-6 group cursor-default hover:-translate-y-1 transition-all duration-300"
+                            className="card-surface rounded-2xl p-4 md:p-6 group cursor-default hover:-translate-y-1 transition-all duration-300"
                         >
-                            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300 ${am.bg} ${am.text}`}>
+                            <div className={`w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center text-lg md:text-2xl mb-3 md:mb-5 group-hover:scale-110 transition-transform duration-300 ${am.bg} ${am.text}`}>
                                 {am.icon}
                             </div>
-                            <h3 className="text-charcoal-900 font-bold text-sm mb-1.5">{am.label}</h3>
-                            <p className="text-charcoal-500 text-sm leading-relaxed">{am.desc}</p>
+                            <h3 className="text-charcoal-900 font-bold text-xs md:text-sm mb-1">{am.label}</h3>
+                            <p className="text-charcoal-500 text-xs md:text-sm leading-relaxed hidden sm:block">{am.desc}</p>
                         </motion.div>
                     ))}
                 </motion.div>

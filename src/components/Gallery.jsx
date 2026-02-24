@@ -33,7 +33,7 @@ export default function Gallery() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-16"
                 >
                     <div className="flex justify-center mb-6">
                         <div className="divider-warm" />
@@ -51,7 +51,7 @@ export default function Gallery() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
-                    className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-4 md:gap-6"
+                    className="grid grid-cols-2 md:grid-cols-3 auto-rows-[150px] md:auto-rows-[220px] gap-3 md:gap-6"
                 >
                     {galleryItems.map((item, i) => (
                         <motion.div

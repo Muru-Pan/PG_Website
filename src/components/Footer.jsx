@@ -23,12 +23,12 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-charcoal-900 border-t border-charcoal-800 pt-20 pb-10 text-cream-100 overflow-hidden relative">
+        <footer className="bg-charcoal-900 border-t border-charcoal-800 pt-12 pb-8 md:pt-20 md:pb-10 text-cream-100 overflow-hidden relative">
             {/* Background graphic */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-terra-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-8 mb-12 md:mb-16">
 
                     {/* Brand */}
                     <div className="lg:col-span-4">
