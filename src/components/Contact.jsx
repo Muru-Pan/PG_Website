@@ -23,11 +23,26 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoading(true)
+
+        const roomLabels = { single: 'Single Occupancy', double: 'Double Sharing', triple: 'Triple Sharing', unsure: 'Just Visiting' }
+        let msg = `Hi, I'd like to inquire about PG accommodation.\n\n`
+        msg += `*Name:* ${formData.name}\n`
+        msg += `*Phone:* ${formData.phone}\n`
+        if (formData.roomType) msg += `*Interested In:* ${roomLabels[formData.roomType] || formData.roomType}\n`
+        if (formData.date) msg += `*Expected Move-in:* ${formData.date}\n`
+        if (formData.message) msg += `*Requirements:* ${formData.message}\n`
+
+        const whatsappUrl = `https://wa.me/919845518336?text=${encodeURIComponent(msg)}`
+
         setTimeout(() => {
             setLoading(false)
             setSuccess(true)
-            setTimeout(() => setSuccess(false), 5000)
-        }, 1500)
+            window.open(whatsappUrl, '_blank')
+            setTimeout(() => {
+                setSuccess(false)
+                setFormData({ name: '', phone: '', roomType: '', date: '', message: '' })
+            }, 3000)
+        }, 800)
     }
 
     return (
