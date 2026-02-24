@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram, FaHeart } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 
 const quickLinks = [
@@ -18,7 +18,6 @@ const socialLinks = [
     { icon: <FaFacebookF />, href: '#' },
     { icon: <FaTwitter />, href: '#' },
     { icon: <FaInstagram />, href: '#' },
-    { icon: <FaLinkedinIn />, href: '#' },
 ]
 
 export default function Footer() {
