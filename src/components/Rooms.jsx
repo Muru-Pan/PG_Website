@@ -97,8 +97,7 @@ export default function Rooms() {
 
                             {/* Content */}
                             <div className="p-5 md:p-8">
-                                <h3 className="font-accent text-2xl md:text-3xl font-bold text-charcoal-900 mb-2">{room.type}</h3>
-                                <p className="text-charcoal-500 font-semibold text-lg mb-4 md:mb-6">₹{room.price}<span className="text-sm font-normal">{room.period}</span></p>
+                                <h3 className="font-accent text-2xl md:text-3xl font-bold text-charcoal-900 mb-6">{room.type}</h3>
 
                                 <Link to="contact" smooth duration={600} offset={-80}>
                                     <button className={`${room.btnColor} w-full justify-center text-sm py-4 rounded-xl`}>
@@ -117,7 +116,7 @@ export default function Rooms() {
                     transition={{ delay: 0.8 }}
                     className="text-center text-charcoal-400 text-sm mt-12 font-medium"
                 >
-                    * All prices include meals, electricity, water & Wi-Fi. A 2-month refundable security deposit applies.
+                    * Includes meals, electricity, water & Wi-Fi. A 2-month refundable security deposit applies.
                 </motion.p>
             </div>
         </section >
